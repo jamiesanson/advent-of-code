@@ -1,11 +1,8 @@
-import day1.Day1
-import day1.Day1Part2
+import day2.Day2Part2
 import java.io.File
 
 fun main(args: Array<String>) {
+    val input = File("input").readLines()
 
-    println(File("").absolutePath)
-    val input = File("input").readLines().joinToString(separator = "\n")
-
-    println("Day 1 pt 2: ${Day1Part2(input)}")
+    println("Day 2 pt 1: ${Day2Part2(input)}")
 }
