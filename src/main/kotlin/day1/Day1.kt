@@ -17,4 +17,3 @@ fun Day1Part2(input: String): String {
         .map { (prev, current) -> if (current > prev) 1 else 0 }
         .sum().toString()
 }
-K
