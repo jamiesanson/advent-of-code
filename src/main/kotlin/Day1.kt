@@ -1,5 +1,3 @@
-package day1
-
 fun Day1(input: String): String {
     return input
         .split('\n')

@@ -1,7 +1,4 @@
 @file:Suppress("KotlinConstantConditions")
-
-package day2
-
 fun Day2Part1(input: List<String>): Int {
     var horizontal = 0
     var vertical = 0
