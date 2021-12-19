@@ -1,3 +1,6 @@
+import helpers.Point
+import helpers.neighbours
+
 fun Day9Part1(input: List<String>): Int {
     val heightMap = input.map { row -> row.trim().toCharArray().map { it.digitToInt() } }
 
@@ -19,19 +22,6 @@ fun Day9Part1(input: List<String>): Int {
     }
 
     return lowPoints.sumOf { it + 1 }
-}
-
-typealias Point = Pair<Int, Int>
-
-fun Point.neighbours(): List<Point> {
-    val (x, y) = this
-
-    return listOf(
-        x - 1 to y,
-        x + 1 to y,
-        x to y - 1,
-        x to y + 1
-    )
 }
 
 fun Day9Part2(input: List<String>): Int {
