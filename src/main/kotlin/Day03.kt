@@ -1,6 +1,3 @@
-import kotlin.experimental.and
-import kotlin.experimental.inv
-
 fun Day3Part1(input: List<String>): Long {
     val means = (0 until input.first().length)
         .map { charIndex ->
