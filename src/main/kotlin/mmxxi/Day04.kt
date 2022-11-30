@@ -1,3 +1,5 @@
+package mmxxi
+
 fun Day4Part1(inputs: List<String>): Int {
     val bingoCalls = inputs.first().split(",").map { it.toInt() }
 

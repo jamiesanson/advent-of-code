@@ -1,3 +1,5 @@
+package mmxxi
+
 fun Day8Part1(input: List<String>): Int {
     return input
         .map { it.split("|").map { it.trim() } }

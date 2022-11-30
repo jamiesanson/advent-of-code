@@ -1,3 +1,5 @@
+package mmxxi
+
 fun Day1(input: String): String {
     return input
         .split('\n')

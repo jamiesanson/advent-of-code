@@ -1,3 +1,5 @@
+package mmxxi
+
 fun Day12Part1(input: List<String>): Int {
     data class Cave(val name: String) {
         val isBig = name.all { it.isUpperCase() }

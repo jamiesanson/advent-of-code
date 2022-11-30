@@ -1,4 +1,4 @@
-package helpers
+package mmxxi.helpers
 
 typealias Point = Pair<Int, Int>
 

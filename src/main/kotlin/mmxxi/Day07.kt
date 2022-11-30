@@ -1,3 +1,5 @@
+package mmxxi
+
 import java.lang.Math.abs
 
 fun Day7Part1(input: List<String>): Int {

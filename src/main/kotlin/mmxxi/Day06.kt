@@ -1,3 +1,5 @@
+package mmxxi
+
 fun Day6Part1(inputs: List<String>): Int {
     val generations = 80
 

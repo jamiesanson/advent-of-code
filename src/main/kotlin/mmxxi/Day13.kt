@@ -1,3 +1,5 @@
+package mmxxi
+
 import helpers.Point
 
 fun Day13Part1(input: List<String>): Int {

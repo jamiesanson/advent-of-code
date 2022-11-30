@@ -1,3 +1,5 @@
+package mmxxi
+
 import helpers.Point
 import helpers.neighbours
 
