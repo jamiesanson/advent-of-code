@@ -1,6 +1,6 @@
 package mmxxi
 
-import helpers.Point
+import mmxxi.helpers.Point
 
 fun Day13Part1(input: List<String>): Int {
     val points = input

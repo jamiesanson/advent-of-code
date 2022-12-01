@@ -1,6 +1,6 @@
+@file:Suppress("KotlinConstantConditions")
 package mmxxi
 
-@file:Suppress("KotlinConstantConditions")
 fun Day2Part1(input: List<String>): Int {
     var horizontal = 0
     var vertical = 0

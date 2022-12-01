@@ -1,7 +1,7 @@
 package mmxxi
 
-import helpers.Point
-import helpers.neighbours
+import mmxxi.helpers.Point
+import mmxxi.helpers.neighbours
 
 fun Day9Part1(input: List<String>): Int {
     val heightMap = input.map { row -> row.trim().toCharArray().map { it.digitToInt() } }
