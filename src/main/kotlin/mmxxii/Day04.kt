@@ -1,7 +1,7 @@
 package mmxxii
 
-fun Day04Part1(input: List<String>): Int {
-    val ranges = input.map {
+private fun List<String>.ranges(): List<Pair<IntRange, IntRange>> {
+    return map {
         val (first, second) = it.split(",")
         fun String.makeRange(): IntRange {
             val (start, end) = split('-')
@@ -10,25 +10,16 @@ fun Day04Part1(input: List<String>): Int {
 
         first.makeRange() to second.makeRange()
     }
+}
 
-    return ranges.filter { (first, second) ->
+fun Day04Part1(input: List<String>): Int = input
+    .ranges()
+    .filter { (first, second) ->
         first.all { second.contains(it) } || second.all { first.contains(it) }
     }.size
-}
 
-
-fun Day04Part2(input: List<String>): Int {
-    val ranges = input.map {
-        val (first, second) = it.split(",")
-        fun String.makeRange(): IntRange {
-            val (start, end) = split('-')
-            return IntRange(start.toInt(), end.toInt())
-        }
-
-        first.makeRange() to second.makeRange()
-    }
-
-    return ranges.filter { (first, second) ->
+fun Day04Part2(input: List<String>): Int = input
+    .ranges()
+    .filter { (first, second) ->
         first.any { second.contains(it) }
     }.size
-}
