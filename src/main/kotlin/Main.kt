@@ -1,9 +1,9 @@
 import java.io.File
-import mmxxii.Day04Part1
-import mmxxii.Day04Part2
+import mmxxii.Day05Part1
+import mmxxii.Day05Part2
 
 fun main(args: Array<String>) {
     val input = File("input").readLines()
 
-    println("Result: ${Day04Part2(input)}")
+    println("Result: ${Day05Part2(input)}")
 }
