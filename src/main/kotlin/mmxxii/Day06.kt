@@ -4,7 +4,7 @@ private fun List<String>.firstIndexOfMarker(markerLength: Int): Int {
     first()
         .windowed(size = markerLength, step = 1)
         .forEachIndexed { index, s ->
-            if (s.toCharArray().toSet().size == markerLength) {
+            if (s.toSet().size == markerLength) {
                 return index + markerLength
             }
         }
