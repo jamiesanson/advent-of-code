@@ -14,4 +14,8 @@ class Input(
     fun sample(part: Int? = null): List<String> {
         return file(if (part != null) "sample_pt$part" else "sample").readLines()
     }
+
+    fun test(name: String): List<String> {
+        return file(name).readLines()
+    }
 }
