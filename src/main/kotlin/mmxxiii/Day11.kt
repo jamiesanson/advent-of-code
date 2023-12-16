@@ -4,7 +4,7 @@ import io.kotest.matchers.shouldBe
 import mmxxiii.input.Input
 import kotlin.math.abs
 
-fun List<String>.rotate(): List<String> {
+fun List<List<Char>>.rotate(): List<List<Char>> {
     val chars = map { it.toList() }
     val new = MutableList(chars.first().size) {
         MutableList(chars.size) { '.' }
@@ -16,7 +16,7 @@ fun List<String>.rotate(): List<String> {
         }
     }
 
-    return new.map { it.joinToString("") }
+    return new.map { it }
 }
 
 private typealias Galaxy = Pair<Long, Long>
@@ -49,7 +49,7 @@ private fun List<Pair<Galaxy, Galaxy>>.distances(): List<Long> {
 
 fun Day11(input: List<String>, expansionMultiplier: Int = 1_000_000): Long {
     val yEmpty = input.mapIndexedNotNull { index, s -> index.takeIf { s.all { it == '.' } } }
-    val xEmpty = input.rotate()
+    val xEmpty = input.map { it.toList() }.rotate()
         .mapIndexedNotNull { index, s -> index.takeIf { s.all { it == '.' } } }
         .map { input.first().length - it - 1 }
 
