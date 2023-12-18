@@ -1,37 +1,14 @@
 package mmxxiii
 
 import io.kotest.matchers.shouldBe
-import mmxxiii.Direction.*
+import mmxxiii.util.Direction.*
 import mmxxiii.input.Input
+import mmxxiii.util.Direction
+import mmxxiii.util.Point
+import mmxxiii.util.step
+import mmxxiii.util.toPoints
 
 private typealias Contraption = Map<Point, Char>
-
-data class Point(val x: Int, val y: Int)
-enum class Direction {
-    Up, Down, Left, Right;
-
-    val xOffset
-        get() = when (this) {
-            Left -> -1
-            Right -> 1
-            else -> 0
-        }
-
-    val yOffset
-        get() = when (this) {
-            Up -> -1
-            Down -> 1
-            else -> 0
-        }
-
-    val horizontal get() = this == Left || this == Right
-    val vertical get() = this == Up || this == Down
-}
-
-private fun Point.step(direction: Direction): Point = copy(
-    x = x + direction.xOffset,
-    y = y + direction.yOffset
-)
 
 private fun Direction.reflect(char: Char): List<Direction> {
     return when {
@@ -103,9 +80,7 @@ private fun Contraption.traverseInto(
 }
 
 fun Day16Part1(input: List<String>): Int {
-    val contraption = input.flatMapIndexed { y, line ->
-        line.mapIndexed { x, c -> Point(x, y) to c }
-    }.toMap()
+    val contraption = input.toPoints()
 
     val visited = mutableMapOf<Point, List<Direction>>()
 
@@ -120,9 +95,7 @@ fun Day16Part1(input: List<String>): Int {
 }
 
 fun Day16Part2(input: List<String>): Int {
-    val contraption = input.flatMapIndexed { y, line ->
-        line.mapIndexed { x, c -> Point(x, y) to c }
-    }.toMap()
+    val contraption = input.toPoints()
 
     val energiseCounts = mutableListOf<Int>()
 
