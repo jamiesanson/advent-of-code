@@ -23,9 +23,9 @@ enum class Direction {
     val vertical get() = this == Up || this == Down
 }
 
-fun Point.step(direction: Direction): Point = copy(
-    x = x + direction.xOffset,
-    y = y + direction.yOffset
+fun Point.step(direction: Direction, stepSize: Int = 1): Point = copy(
+    x = x + (stepSize * direction.xOffset),
+    y = y + (stepSize * direction.yOffset)
 )
 
 fun Point.neighbours(diagonallyAdjacent: Boolean = true): List<Point> {
