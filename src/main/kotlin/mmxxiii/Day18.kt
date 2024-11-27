@@ -2,10 +2,10 @@ package mmxxiii
 
 import io.kotest.matchers.shouldBe
 import mmxxiii.input.Input
-import mmxxiii.util.Direction
-import mmxxiii.util.Direction.*
-import mmxxiii.util.Point
-import mmxxiii.util.step
+import util.Direction
+import util.Direction.*
+import util.Point
+import util.step
 
 private data class Instruction(val direction: Direction, val count: Int, val color: String)
 

@@ -1,7 +1,8 @@
-package mmxxiii.util
+package util
 
 
 data class Point(val x: Int, val y: Int)
+
 enum class Direction {
     Up, Down, Left, Right;
 

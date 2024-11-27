@@ -1,12 +1,12 @@
 package mmxxiii
 
 import io.kotest.matchers.shouldBe
-import mmxxiii.util.Direction.*
+import util.Direction.*
 import mmxxiii.input.Input
-import mmxxiii.util.Direction
-import mmxxiii.util.Point
-import mmxxiii.util.step
-import mmxxiii.util.toPoints
+import util.Direction
+import util.Point
+import util.step
+import util.toPoints
 
 private typealias Contraption = Map<Point, Char>
 

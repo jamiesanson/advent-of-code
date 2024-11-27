@@ -2,9 +2,9 @@ package mmxxiii
 
 import io.kotest.matchers.shouldBe
 import mmxxiii.input.Input
-import mmxxiii.util.Point
-import mmxxiii.util.neighbours
-import mmxxiii.util.toPoints
+import util.Point
+import util.neighbours
+import util.toPoints
 import kotlin.math.pow
 import kotlin.math.sqrt
 
