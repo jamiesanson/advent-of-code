@@ -1,5 +1,3 @@
-import org.jetbrains.kotlin.gradle.tasks.KotlinCompile
-
 plugins {
     kotlin("jvm") version "2.1.0"
     application
@@ -12,10 +10,10 @@ repositories {
 }
 
 dependencies {
-    implementation("io.kotest:kotest-assertions-core:5.5.0")
+    implementation("io.kotest:kotest-assertions-core:6.0.0.M1")
     implementation("org.jetbrains.kotlinx:kotlinx-coroutines-core:1.9.0")
 }
 
-tasks.withType<KotlinCompile> {
-    kotlinOptions.jvmTarget = "19"
+kotlin {
+    jvmToolchain(21)
 }
