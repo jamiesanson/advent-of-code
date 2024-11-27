@@ -2,3 +2,6 @@
 .kotlin
 .idea
 build
+
+src/main/kotlin/**/input/*
+!src/main/kotlin/**/input/input.kt
