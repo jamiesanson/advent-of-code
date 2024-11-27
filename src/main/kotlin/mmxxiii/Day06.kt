@@ -1,7 +1,8 @@
 package mmxxiii
 
 import io.kotest.matchers.shouldBe
-import mmxxiii.input.Input
+import mmxxiii.input.input
+import util.Input
 
 data class Race(
     val time: Long,
@@ -50,7 +51,7 @@ fun Day06Part2(input: List<String>): Int {
 }
 
 fun main() {
-    val input = Input("06")
+    val input = input(day = 6)
 
     Day06Part1(input.sample()) shouldBe 288
     Day06Part1(input.main()) shouldBe 3317888

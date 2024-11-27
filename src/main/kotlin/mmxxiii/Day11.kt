@@ -1,7 +1,8 @@
 package mmxxiii
 
 import io.kotest.matchers.shouldBe
-import mmxxiii.input.Input
+import mmxxiii.input.input
+import util.Input
 import kotlin.math.abs
 
 fun List<List<Char>>.rotate(): List<List<Char>> {
@@ -69,7 +70,7 @@ fun Day11(input: List<String>, expansionMultiplier: Int = 1_000_000): Long {
 }
 
 fun main() {
-    val input = Input("11")
+    val input = input(day = 11)
 
     Day11(input.sample(), expansionMultiplier = 2) shouldBe 374
     Day11(input.sample(), expansionMultiplier = 10) shouldBe 1030

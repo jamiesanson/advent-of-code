@@ -1,7 +1,8 @@
 package mmxxiii
 
 import io.kotest.matchers.shouldBe
-import mmxxiii.input.Input
+import mmxxiii.input.input
+import util.Input
 
 data class DomainMap(
     val ranges: Map<LongRange, LongRange>
@@ -114,7 +115,7 @@ fun Day05Part2(input: List<String>): Long {
 }
 
 fun main() {
-    val input = Input("05")
+    val input = input(day = 5)
 
     Day05Part1(input.sample()) shouldBe 35
     Day05Part1(input.main()) shouldBe 84470622

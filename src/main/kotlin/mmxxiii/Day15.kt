@@ -1,7 +1,8 @@
 package mmxxiii
 
 import io.kotest.matchers.shouldBe
-import mmxxiii.input.Input
+import mmxxiii.input.input
+import util.Input
 
 private fun String.hash(): Int {
     return fold(0) { acc, char ->
@@ -54,7 +55,7 @@ fun Day15Part2(input: List<String>): Int {
 }
 
 fun main() {
-    val input = Input("15")
+    val input = input(day = 15)
 
     "HASH".hash() shouldBe 52
 

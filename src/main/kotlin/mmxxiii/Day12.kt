@@ -4,7 +4,8 @@ import io.kotest.matchers.shouldBe
 import kotlinx.coroutines.async
 import kotlinx.coroutines.awaitAll
 import kotlinx.coroutines.runBlocking
-import mmxxiii.input.Input
+import mmxxiii.input.input
+import util.Input
 
 private const val Broken = '#'
 private const val Operational = '.'
@@ -91,7 +92,7 @@ fun Day12Part2(input: List<String>): Long {
 }
 
 fun main() {
-    val input = Input("12")
+    val input = input(day = 12)
 
     Day12Part1(input.sample()) shouldBe 21
     Day12Part1(input.main()) shouldBe 7705

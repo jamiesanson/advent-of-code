@@ -1,7 +1,8 @@
 package mmxxiii
 
 import io.kotest.matchers.shouldBe
-import mmxxiii.input.Input
+import mmxxiii.input.input
+import util.Input
 
 fun List<String>.findAllComponents(): List<Component> = buildList {
     this@findAllComponents.forEachIndexed { y, line ->
@@ -102,7 +103,7 @@ fun Day03Part2(input: List<String>): Int {
 }
 
 fun main() {
-    val input = Input("03")
+    val input = input(day = 3)
 
     Day03Part1(input.sample()) shouldBe 4361
     Day03Part1(input.main()) shouldBe 549908

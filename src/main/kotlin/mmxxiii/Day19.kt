@@ -2,7 +2,8 @@ package mmxxiii
 
 import io.kotest.matchers.shouldBe
 import mmxxiii.Workflow.Result.*
-import mmxxiii.input.Input
+import mmxxiii.input.input
+import util.Input
 
 private typealias Part = Map<Char, Int>
 
@@ -222,7 +223,7 @@ fun Day19Part2(input: List<String>): Long {
 }
 
 fun main() {
-    val input = Input("19")
+    val input = input(day = 19)
 
     Day19Part1(input.sample()) shouldBe 19114
     Day19Part1(input.main()) shouldBe 480738

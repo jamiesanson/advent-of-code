@@ -1,7 +1,8 @@
 package mmxxiii
 
 import io.kotest.matchers.shouldBe
-import mmxxiii.input.Input
+import mmxxiii.input.input
+import util.Input
 import util.Point
 import util.neighbours
 import util.toPoints
@@ -80,7 +81,7 @@ fun Day17Part1(input: List<String>): Int {
 }
 
 fun main() {
-    val input = Input("17")
+    val input = input(day = 17)
 
     Day17Part1(input.sample()) shouldBe 102
 }

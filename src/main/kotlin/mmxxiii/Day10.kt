@@ -1,7 +1,8 @@
 package mmxxiii
 
 import io.kotest.matchers.shouldBe
-import mmxxiii.input.Input
+import mmxxiii.input.input
+import util.Input
 
 data class Connector(
     val character: Char,
@@ -274,7 +275,7 @@ fun Day10Part2(input: List<String>, debug: Boolean = false): Int {
 }
 
 fun main() {
-    val input = Input("10")
+    val input = input(day = 10)
 
     Day10Part1(input.sample()) shouldBe 4
     Day10Part1(input.sample(part = 1)) shouldBe 8

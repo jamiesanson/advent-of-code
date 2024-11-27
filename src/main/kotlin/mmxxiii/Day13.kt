@@ -4,7 +4,8 @@ import io.kotest.matchers.shouldBe
 import kotlinx.coroutines.async
 import kotlinx.coroutines.awaitAll
 import kotlinx.coroutines.runBlocking
-import mmxxiii.input.Input
+import mmxxiii.input.input
+import util.Input
 
 private fun List<String>.parsePatterns(): List<Pattern> {
     var emptyLineCount = 0
@@ -73,7 +74,8 @@ fun Day13(input: List<String>, lenience: Int = 0): Long = runBlocking {
 }
 
 fun main() {
-    val input = Input("13")
+    val input = input(day = 13)
+
     Day13(input.sample()) shouldBe 405
     Day13(input.main()) shouldBe 34911
 

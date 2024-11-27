@@ -1,7 +1,8 @@
 package mmxxiii
 
 import io.kotest.matchers.shouldBe
-import mmxxiii.input.Input
+import mmxxiii.input.input
+import util.Input
 
 private const val RoundRock = 'O'
 private const val SquareRock = '#'
@@ -57,7 +58,7 @@ fun Day14(input: List<String>, cycles: Int = 0): Int {
 }
 
 fun main() {
-    val input = Input("14")
+    val input = input(day = 14)
 
     Day14(input.sample()) shouldBe 136
     Day14(input.main()) shouldBe 109833

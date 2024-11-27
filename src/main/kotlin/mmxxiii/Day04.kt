@@ -1,7 +1,8 @@
 package mmxxiii
 
 import io.kotest.matchers.shouldBe
-import mmxxiii.input.Input
+import mmxxiii.input.input
+import util.Input
 import kotlin.math.pow
 
 private data class Card(
@@ -79,7 +80,7 @@ fun Day04Part2(input: List<String>): Int {
 
 
 fun main() {
-    val input = Input("04")
+    val input = input(day = 4)
 
     Day04Part1(input.sample()) shouldBe 13
     Day04Part1(input.main()) shouldBe 26443

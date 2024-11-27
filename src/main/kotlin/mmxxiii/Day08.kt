@@ -1,7 +1,8 @@
 package mmxxiii
 
 import io.kotest.matchers.shouldBe
-import mmxxiii.input.Input
+import mmxxiii.input.input
+import util.Input
 
 data class LRMap(
     val instructions: List<Char>,
@@ -98,7 +99,7 @@ fun Day08Part2(input: List<String>): Long {
 }
 
 fun main() {
-    val input = Input("08")
+    val input = input(day = 8)
 
     Day08Part1(input.sample()) shouldBe 2
     Day08Part1(input.main()) shouldBe 19241

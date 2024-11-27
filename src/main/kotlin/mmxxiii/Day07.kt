@@ -1,7 +1,8 @@
 package mmxxiii
 
 import io.kotest.matchers.shouldBe
-import mmxxiii.input.Input
+import mmxxiii.input.input
+import util.Input
 
 data class Hand(
     val cards: List<Char>,
@@ -111,7 +112,7 @@ fun Day07Part2(input: List<String>): Int {
 }
 
 fun main() {
-    val input = Input("07")
+    val input = input(day = 7)
 
     Day07Part1(input.sample()) shouldBe 6440
     Day07Part1(input.main()) shouldBe 247961593

@@ -1,11 +1,14 @@
-package mmxxiii.input
+package util
 
 import java.io.File
 
 class Input(
-    private val day: String,
+    private val day: Int,
+    private val year: String,
 ) {
-    private fun file(name: String): File = File("src/main/kotlin/mmxxiii/input/day$day/$name")
+    private val paddedDay = day.toString().padStart(2, '0')
+
+    private fun file(name: String): File = File("src/main/kotlin/$year/input/day$paddedDay/$name")
 
     fun main(): List<String> {
         return file("input").readLines()
@@ -13,9 +16,5 @@ class Input(
 
     fun sample(part: Int? = null): List<String> {
         return file(if (part != null) "sample_pt$part" else "sample").readLines()
-    }
-
-    fun test(name: String): List<String> {
-        return file(name).readLines()
     }
 }

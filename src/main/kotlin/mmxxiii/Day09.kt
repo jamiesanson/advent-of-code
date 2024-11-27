@@ -2,7 +2,8 @@ package mmxxiii
 
 import io.kotest.matchers.shouldBe
 import kotlinx.coroutines.*
-import mmxxiii.input.Input
+import mmxxiii.input.input
+import util.Input
 
 private fun generateDivisors(original: List<Int>): List<List<Int>> {
     val divisors = mutableListOf<List<Int>>()
@@ -65,7 +66,7 @@ fun Day09Part2(input: List<String>): Int {
 }
 
 fun main() {
-    val input = Input("09")
+    val input = input(day = 9)
 
     Day09Part1(input.sample()) shouldBe 114
     Day09Part1(input.main()) shouldBe 2043677056
