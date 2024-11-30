@@ -1,6 +1,5 @@
 plugins {
-    kotlin("jvm") version "2.1.0"
-    application
+    alias(libs.plugins.kotlin)
 }
 
 group = "dev.sanson.aoc"
@@ -10,8 +9,8 @@ repositories {
 }
 
 dependencies {
-    implementation("io.kotest:kotest-assertions-core:6.0.0.M1")
-    implementation("org.jetbrains.kotlinx:kotlinx-coroutines-core:1.9.0")
+    implementation(libs.kotest.assertions)
+    implementation(libs.kotlinx.coroutines)
 }
 
 kotlin {
