@@ -4,10 +4,6 @@ plugins {
 
 group = "dev.sanson.aoc"
 
-repositories {
-    mavenCentral()
-}
-
 dependencies {
     implementation(libs.kotest.assertions)
     implementation(libs.kotlinx.coroutines)
