@@ -29,6 +29,10 @@ fun Point.step(direction: Direction, stepSize: Int = 1): Point = copy(
     y = y + (stepSize * direction.yOffset)
 )
 
+operator fun Point.minus(other: Point): Point = Point(x - other.x, y - other.y)
+
+operator fun Point.plus(other: Point): Point = Point(x + other.x, y + other.y)
+
 fun Point.neighbours(diagonallyAdjacent: Boolean = true): List<Point> {
     val (x, y) = this
 
