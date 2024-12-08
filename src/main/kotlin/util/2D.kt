@@ -22,6 +22,24 @@ enum class Direction {
 
     val horizontal get() = this == Left || this == Right
     val vertical get() = this == Up || this == Down
+
+    fun rotate(clockwise: Boolean = true): Direction {
+        return if (clockwise) {
+            when (this) {
+                Up -> Right
+                Down -> Left
+                Left -> Up
+                Right -> Down
+            }
+        } else {
+            when (this) {
+                Up -> Left
+                Down -> Right
+                Left -> Down
+                Right -> Up
+            }
+        }
+    }
 }
 
 fun Point.step(direction: Direction, stepSize: Int = 1): Point = copy(
@@ -59,4 +77,13 @@ fun List<String>.toPoints(): Map<Point, Char> {
     return flatMapIndexed { y, line ->
         line.mapIndexed { x, c -> Point(x, y) to c }
     }.toMap()
+}
+
+fun Map<Point, Char>.debug(highlight: Point? = null) {
+    println()
+    for ((point, char) in entries) {
+        if (point.x == 0) println()
+        if (point == highlight) print('O') else print(char)
+    }
+    println()
 }
