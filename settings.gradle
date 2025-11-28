@@ -1,11 +1,1 @@
-import org.gradle.api.initialization.resolve.RepositoriesMode
-
 rootProject.name = "advent-of-code"
-
-dependencyResolutionManagement {
-    repositoriesMode = RepositoriesMode.FAIL_ON_PROJECT_REPOS
-    repositories {
-        google()
-        mavenCentral()
-    }
-}
