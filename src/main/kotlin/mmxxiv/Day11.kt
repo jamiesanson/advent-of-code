@@ -1,7 +1,7 @@
-package mmxxiiii
+package mmxxiv
 
 import io.kotest.matchers.shouldBe
-import mmxxiiii.input.input
+import mmxxiv.input.input
 
 private fun Day11(lines: List<String>, iterations: Int): Long {
     val stones = lines.first().split(" ").map { it.toLong() }.toMutableList()

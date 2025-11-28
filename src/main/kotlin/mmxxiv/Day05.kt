@@ -1,7 +1,7 @@
-package mmxxiiii
+package mmxxiv
 
 import io.kotest.matchers.shouldBe
-import mmxxiiii.input.input
+import mmxxiv.input.input
 
 private data class Rule(val first: Int, val second: Int) {
     fun allows(list: List<Int>): Boolean {

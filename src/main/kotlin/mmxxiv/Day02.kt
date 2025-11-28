@@ -1,7 +1,7 @@
-package mmxxiiii
+package mmxxiv
 
 import io.kotest.matchers.shouldBe
-import mmxxiiii.input.input
+import mmxxiv.input.input
 
 private fun parseReports(lines: List<String>): List<List<Int>> {
     return lines.map { line ->

@@ -1,9 +1,9 @@
 @file:Suppress("FunctionName")
 
-package mmxxiiii
+package mmxxiv
 
 import io.kotest.matchers.shouldBe
-import mmxxiiii.input.input
+import mmxxiv.input.input
 import kotlin.math.abs
 
 private fun splitLists(lines: List<String>): Pair<List<Int>, List<Int>> {
